@@ -15,4 +15,4 @@ rate = int(input("What is the current exchange rate for the Euro to Dollar?"))
 amount = int(input("How much currency would you like to exchange?"))
 total = rate*amount
 result = total-3
-print("Your result is $", result)
+print(result)
