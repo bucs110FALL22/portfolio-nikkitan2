@@ -17,3 +17,5 @@ my_turtle.left(90)
 my_turtle.forward(50)
 my_turtle.left(90)
 my_turtle.forward(50)
+
+my_turtle.color("red")
