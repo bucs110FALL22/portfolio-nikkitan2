@@ -21,4 +21,4 @@ colors = ["yellow", "green", "pink", "blue", "purple"]
 print(colors, type(colors))
 random_color = random.choice(colors)
 print(random_color, type(random_color))
-print("The color randomly selected is", random.choice(colors))
+print("The color randomly selected is", random_color)
