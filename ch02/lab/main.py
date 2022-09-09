@@ -15,4 +15,4 @@ cost_per_class = (cost_per_week / classes_per_week)
 print("Your cost per class is", cost_per_class)
 #Part B
 colors = ["yellow", "green", "pink", "blue", "purple"]
-print("The color selected color is", random.choice(colors))
+print("The color selected is", random.choice(colors))
