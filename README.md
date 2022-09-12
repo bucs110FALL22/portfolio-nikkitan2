@@ -14,5 +14,5 @@ Preferred Name Nikki Tan
 
 Discord username: nikki#9949
 
-REPL url: https://github.com/bucs110FALL22/portfolio-nikkitan2
+REPL url: https://replit.com/join/cbooswjjrk-nikkitan1
 
