@@ -18,9 +18,21 @@ michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
 
 ## 5. Your PART A code goes here
+x = random.randrange(1,10)
+print(x)
+#Race 1
+michelangelo.forward(50)
+leonardo.forward(50)
+michelangelo.goto(-100,20)
+leonardo.goto(-100,-20)
+#Race 2
 
 
 # PART B - complete part B here
+import pygame
+import math
 
+pygame.init()
+window = pygame.display.set_mode()
 
 window.exitonclick()
