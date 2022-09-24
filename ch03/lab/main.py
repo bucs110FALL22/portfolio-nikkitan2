@@ -139,7 +139,6 @@ pygame.time.wait(2000)
 window.fill("ghostwhite")
 pygame.display.flip()
 
-window.exitonclick()
 
 
 
