@@ -19,7 +19,7 @@ leonardo.goto(-100,-20)
 
 ## 5. Your PART A code goes here
 
-x = random.randrange(0,11)
+x = random.randrange(0,10)
 print(x)
 #Race 1
 michelangelo.speed(1)
@@ -84,7 +84,6 @@ for i in range(num_sides):
   y = side_length * math.sin(theta) + offset
   coords.append([x,y])
 
-
 pygame.draw.polygon(window,"blue",coords)
 pygame.display.flip()
 pygame.time.wait(2000)
@@ -101,7 +100,6 @@ for i in range(num_sides):
   x = side_length * math.cos(theta) + offset
   y = side_length * math.sin(theta) + offset
   coords.append([x,y])
-
 
 pygame.draw.polygon(window,"blue",coords)
 pygame.display.flip()
@@ -120,7 +118,6 @@ for i in range(num_sides):
   y = side_length * math.sin(theta) + offset
   coords.append([x,y])
 
-
 pygame.draw.polygon(window,"blue",coords)
 pygame.display.flip()
 pygame.time.wait(2000)
@@ -135,13 +132,9 @@ for i in range(num_sides):
   y = side_length * math.sin(theta) + offset
   coords.append([x,y])
 
-
 pygame.draw.polygon(window,"blue",coords)
 pygame.display.flip()
 pygame.time.wait(2000)
-
-window.fill("ghostwhite")
-pygame.display.flip()
 
 window.fill("ghostwhite")
 pygame.display.flip()
