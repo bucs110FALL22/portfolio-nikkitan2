@@ -36,17 +36,34 @@ for i in range(10):
   pygame.display.flip()
   
 #part c
-
-while True:
-  red_button = pygame.draw.rect(window, red, [0, 0, 100, 200],)
-  blue_button = pygame.draw.rect(window, blue, [0, 100, 100, 200],)
-  pygame.display.flip()
-  mouse_x, mouse_y = pygame.mouse.get_pos()
+window = pygame.display.set_mode()
+playerChoice = ""
+leftRect = pygame.Rect(0, 0, x/2, y)
+rightRect = pygame.Rect(x/2, 0, x/2, y)
+redBTn = pygame.draw.rect(window, "red", leftRect)
+blueBTn = pygame.draw.rect(window, "blue", rightRect)
+pygame.display.flip()
+print("who do you think will win?")
+print("red or blue?")
+awaitingGuess = True
+while awaitingGuess == True:
   for event in pygame.event.get():
     if event.type == pygame.MOUSEBUTTONDOWN:
-      if blue_button.collidepoint(mouse_x, mouse_y):
-        team = "blue"
-      else:
-        team = "red"
+      if event.pos[0] < x/2:
+        playerChoice = "red"
+        awaitingGuess = False
+      elif event.pos[0] > x/2:
+        playerChoice = "blue"
+        awaitingGuess = False
+print("you chose", playerChoice)
+pygame.display.flip()
+pygame.time.wait(500)
 
-team = input("pick player red or blue:")
+if winner is playerChoice:
+  print("you were right!")
+  print("you win!")
+else:
+  print("you were wrong")
+  print("you lost.")
+  pygame.time.wait(4000)
+
