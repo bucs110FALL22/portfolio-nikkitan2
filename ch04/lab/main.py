@@ -32,7 +32,7 @@ for i in range(10):
     pygame.draw.circle(screen, ('yellow'), coords, 5, 0)
   if is_in_circle == False:
     pygame.draw.circle(screen, ('pink'), coords, 5, 0)
-
-pygame.display.flip()
+    
+  pygame.display.flip()
   
 #part c
