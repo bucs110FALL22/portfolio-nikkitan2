@@ -36,3 +36,17 @@ for i in range(10):
   pygame.display.flip()
   
 #part c
+
+while True:
+  red_button = pygame.draw.rect(window, red, [0, 0, 100, 200],)
+  blue_button = pygame.draw.rect(window, blue, [0, 100, 100, 200],)
+  pygame.display.flip()
+  mouse_x, mouse_y = pygame.mouse.get_pos()
+  for event in pygame.event.get():
+    if event.type == pygame.MOUSEBUTTONDOWN:
+      if blue_button.collidepoint(mouse_x, mouse_y):
+        team = "blue"
+      else:
+        team = "red"
+
+team = input("pick player red or blue:")
