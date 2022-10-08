@@ -58,12 +58,3 @@ while awaitingGuess == True:
 print("you chose", playerChoice)
 pygame.display.flip()
 pygame.time.wait(500)
-
-if winner is playerChoice:
-  print("you were right!")
-  print("you win!")
-else:
-  print("you were wrong")
-  print("you lost.")
-  pygame.time.wait(4000)
-
