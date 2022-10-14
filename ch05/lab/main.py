@@ -1,10 +1,17 @@
+
 def seq3np1(n):
-  while n!= 1 and n > 0:
+  n = 101
+  count = 0
+  while n > 1:
     print(n)
     if (n % 2) == 0:
-      n = n // 2
+      n = n // 2 
     else:
       n = 3 * n + 1
-  print(n)
+    count = count + 1
+      
+    print(n)
+    print(count)
+  
   
 seq3np1(3)
