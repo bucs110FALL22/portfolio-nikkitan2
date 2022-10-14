@@ -9,13 +9,14 @@ def seq3np1(n):
   
   upper_limit = 20
   iters = {}
-  max_so_far = 
+  max_so_far = max(n)
+  scale = 5
   for i in range(2, upper_limit + 1):
     count = 0
   while n > 1:
     print(n)
     if (n % 2) == 0:
-      n = n // 2     
+      n = n // 2 
     else:
       n = 3 * n + 1
     count = count + 1
