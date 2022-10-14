@@ -1,10 +1,15 @@
+import pygame
+pygame.init()
+pygame.font.Font(None, 20)
+
+display = pygame.display.set_mode()
 
 def seq3np1(n):
   n = 101
   
   upper_limit = 20
   iters = {}
-  
+  max_so_far = 
   for i in range(2, upper_limit + 1):
     count = 0
   while n > 1:
