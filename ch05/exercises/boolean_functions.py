@@ -1,6 +1,6 @@
 def percentage_to_letter(score=0):
   score = int(input("What was your exam percentage?")
-  if score >= 90:
+  if score > 90:
     print("You received an A")
   if score 80-<90:
     print("You received a B")
@@ -10,3 +10,6 @@ def percentage_to_letter(score=0):
     print("You received a D")
   if score < 60:
     grade = print("You received a F")
+
+def is_passing(letter=None):
+  print("What is your score?")
