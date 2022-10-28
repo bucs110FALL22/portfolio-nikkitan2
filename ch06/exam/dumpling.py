@@ -44,4 +44,11 @@ t.penup()
 t.goto(40,50)
 t.pendown()
 t.goto(50,50)
-pygame.time.wait(2000)
+
+t.penup()
+t.goto(65,30)
+t.pendown()
+t.circle(5)
+
+
+pygame.time.wait(5000)
