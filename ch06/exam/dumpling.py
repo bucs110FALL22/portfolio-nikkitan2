@@ -5,7 +5,7 @@ t = turtle.Turtle()
 window = turtle.Screen()
 window.bgcolor("black")
 t.color("white")
-t.speed(1)
+t.speed(15)
 t.pensize(10)
 
 def draw(r):
@@ -18,6 +18,7 @@ t.fillcolor("white")
 t.begin_fill()
 draw(100)
 t.end_fill()
+
 t.begin_fill()
 t.penup()
 t.goto(20,100)
@@ -40,3 +41,14 @@ draw(20)
 t.end_fill()
 
 pygame.time.wait(2000)
+
+t.color("black")
+t.penup()
+t.goto(90,50)
+t.pendown()
+t.goto(100,50)
+
+t.penup()
+t.goto(40,50)
+t.pendown()
+t.goto(50,50)
