@@ -1,3 +1,12 @@
 {
-  "files": {}
+  "files": {
+    "ch06/exam/dumpling.py": [
+      {
+        "id": "4d5b134f-460d-4916-8b31-b9ea8ccba758",
+        "line": 5,
+        "version": 64,
+        "index": 53
+      }
+    ]
+  }
 }
