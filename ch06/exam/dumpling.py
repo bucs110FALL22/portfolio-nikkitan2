@@ -5,17 +5,16 @@ t = turtle.Turtle()
 window = turtle.Screen()
 window.bgcolor("black")
 t.hideturtle()
-t.color("white")
+t.color("papayawhip")
 t.speed(15)
 t.pensize(10)
-t.fillcolor("white")
+t.fillcolor("papayawhip")
 
 def draw(r):
   for i in range(2):
     t.circle(r,90)      
     t.circle(r//2,90)
 t.seth(-45)
-
 
 t.begin_fill()
 draw(100)
@@ -49,6 +48,5 @@ t.penup()
 t.goto(65,30)
 t.pendown()
 t.circle(5)
-
 
 pygame.time.wait(5000)
