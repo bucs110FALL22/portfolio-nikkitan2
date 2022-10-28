@@ -7,6 +7,7 @@ window.bgcolor("black")
 t.color("white")
 t.speed(15)
 t.pensize(10)
+t.fillcolor("white")
 
 def draw(r):
   for i in range(2):
@@ -14,32 +15,22 @@ def draw(r):
     t.circle(r//2,90)
 t.seth(-45)
 
-t.fillcolor("white")
+
 t.begin_fill()
 draw(100)
 t.end_fill()
 
-t.begin_fill()
-t.penup()
-t.goto(20,100)
-t.pendown()
-draw(20)
-t.end_fill()
+def move(x, y):
+  t.begin_fill()
+  t.penup()
+  t.goto(x,y)
+  t.pendown()
+  draw(23)
+  t.end_fill()
 
-t.begin_fill()
-t.penup()
-t.goto(50,110)
-t.pendown()
-draw(25)
-t.end_fill()
-
-t.begin_fill()
-t.penup()
-t.goto(90,100)
-t.pendown()
-draw(20)
-t.end_fill()
-
+move(20, 100)
+move(55, 110)
+move(90,100)
 pygame.time.wait(2000)
 
 t.color("black")
