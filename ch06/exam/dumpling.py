@@ -1,6 +1,12 @@
 import turtle
 import pygame
 
+def main():
+  print("A dumpling will appear on your screen!")
+
+if __name__=="__main__":
+  main()
+
 t = turtle.Turtle()
 window = turtle.Screen()
 window.bgcolor("black")
