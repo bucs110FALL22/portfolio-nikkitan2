@@ -9,6 +9,10 @@ r = Rectangle(-1, 1, 1, 1)
 assert((r.x, r.y, r.height, r.width) == (0,1,1,1))
 
 r = Rectangle(1, -1, 1, 1)
+import rectangle
+import surface
+
+#Rectangle class
 assert((r.x, r.y, r.height, r.width) == (1,0,1,1))
 
 r = Rectangle(1, 1, -1, 1)
