@@ -1,48 +1,36 @@
 #part a
 class StringUtility:
-  def __init__(self, s):
-    self.s = s
+  def __init__(self, string):
+    self.string = string
 
   def __str__(self):
-    return self.s
+    return self.string
   
 #part b
   def vowels(self):
-    vowelCount = 0
-    n = self.s
-    n.lower()
-
-    for i in n:
+    count = 0
+    for i in self.string:
       if(i=='a' or i=='e'or i=='i' or i=='o' or i=='u'):
-        vowelCount +=1
-    if(vowelCount >=5):
-      return print("many")
+        count = count + 1
+    if count < 5:
+      return str(count)
     else:
-      return vowelCount
-    
+      return f"many"
+  
   def bothEnds(self):
-    if (len(self.s) <= 2):
+    if len(self.string) >= 2:
+      my_string = self.string[0] + self.string[1] + self.string[-2] + self.string[-1]
+      return my_string
+    else:
       return ''
-    return self.s[:2]+self.s[-2:]
 
-  def fixStart(self):
-    n = self.s[1:]
-    n.replace(self.s[0],'*')
-    return self.s[0]+n
+def fixStart(self):
+  if self.string <= 1:
+    return self.string
+  else:
+    char: self.string[0]
+    copyString = self.string
+    
 
-  def asciiSum(self):
-    total = 0
-    for i in self.s:
-      total += ord(i)
-    return total
-  
-  def cipher(self):
-    key = len(self.s)
-    encrypt = ''
-    for i in self.s:
-      if (i.isupper()):
-        encrypt += chr((ord(i) + key - 65) % 26 +65)
-      else:
-        encrypt += chr((ord(i)+key -97) % 26 +97)
-    return encrypt
-  
+
+ 
