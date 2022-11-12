@@ -25,12 +25,14 @@ class StringUtility:
       return ''
 
 def fixStart(self):
-  if self.string <= 1:
-    return self.string
+  if len(self.string)>=1:
+    firstl= self.string[0]
+    for i in self.string:
+      mystring = self.string[1:].replace(firstl,"*")
+      return self.string[0]+ mystring
   else:
-    char: self.string[0]
-    copyString = self.string
-    
+    return('')
+
 
 
  
