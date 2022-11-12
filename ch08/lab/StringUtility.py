@@ -24,15 +24,36 @@ class StringUtility:
     else:
       return ''
 
-def fixStart(self):
-  if len(self.string)>=1:
-    firstl= self.string[0]
-    for i in self.string:
-      mystring = self.string[1:].replace(firstl,"*")
-      return self.string[0]+ mystring
-  else:
-    return('')
+  def fixStart(self):
+    if len(self.string)>=1:
+      firstl= self.string[0]
+      for i in self.string:
+        mystring = self.string[1:].replace(firstl,"*")
+        return self.string[0]+ mystring
+    else:
+      return('')
 
-
-
- 
+    def asciiSum(self):
+        ans = 0
+        for i in range(len(self.s)):
+            ans = ans + ord(self.s[i])
+        return ans
+    
+    def cipher(self):
+        l = len(self.s)
+        out=''
+        for i in range(l):
+            if ord(self.s[i]) in range(65, 91):
+                if ord(self.s[i]) + l <=90:
+                    out = out + chr(ord(self.s[i]) + l)
+                else:
+                    out = out + chr(ord('A') + ord(self.s[i]) + l - 90)
+            
+            elif ord(self.s[i]) in range(97, 123):
+                if ord(self.s[i]) + l <=122:
+                    out = out + chr(ord(self.s[i]) + l)
+                else:
+                    out = out + chr(ord('A') + ord(self.s[i]) + l - 122)
+            else:
+                out = out + self.s[i]
+        return out
