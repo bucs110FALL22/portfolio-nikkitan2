@@ -2,7 +2,7 @@ import requests
 
 class AztroAPI:
 
-  def __init__(self):
+  def __init__(self, sign, day):
     self.api_url = "https://aztro.sameerkumar.website"
     self.sign = sign
     self.day = day
