@@ -24,16 +24,17 @@ def main():
     11: aquarius
     12: pisces
     ''')
-    sign = input("please input the number to the sign you are")
+    sign = input("please input the number to the sign you are ")
     sign = sign.strip()
     try:
       sign = int(sign)
-      if not (0 < sign < 13):
+      if not (1 <= sign <= 12):
         print("Number is out of range")
         continue
     except:
       print("Input did not match format")
       continue
+    sign = sign - 1
     sign = signnames[sign]
     aztro_data = aztro.get(sign)
     emojihub_data = emojihub.get()
