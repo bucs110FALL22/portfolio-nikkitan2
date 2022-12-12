@@ -23,3 +23,22 @@ emoji = data["emoji"]
 
 # Print the message
 print("Based on your birthdate ({}), your zodiac sign is: {} {}".format(birthdate, sign, emoji))
+
+
+
+
+for emoji in emojihub_data:
+  # Check if the name of the current emoji exists in the aztro_data object
+  if emoji["name"].lower() in aztro_data:
+    # If it does, then access the description of the emoji
+    description = aztro_data[emoji["name"].lower()]
+  else:
+    # If it doesn't, then set the description to an empty string
+    description = ""
+
+  combined_data.append({
+    "name": emoji["name"],
+    "htmlCode": emoji["htmlCode"],
+    "description": description
+  })
+
