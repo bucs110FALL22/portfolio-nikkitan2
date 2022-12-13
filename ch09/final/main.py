@@ -38,7 +38,7 @@ def main():
     sign = signnames[sign]
     aztro_data = aztro.get(sign)
     emojihub_data = emojihub.get()
-    emoji = emojihub_data["unicode"][0].replace("+", "000")
+    emoji = emojihub_data["name"]
     # emoji = "{" + emoji + "}"
     print("Your lucky color today is: " + aztro_data["color"])
     print("Personally, that color makes me feel like this", emoji)
