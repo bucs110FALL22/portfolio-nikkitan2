@@ -39,9 +39,13 @@ def main():
     aztro_data = aztro.get(sign)
     emojihub_data = emojihub.get()
     emoji = emojihub_data["name"]
-   
+    emoji_unico = "\\" + emojihub_data["unicode"][0].strip().replace("+", "000")
+    emoji = emoji_unico.encode().decode('unicode-escape')
     print("Your lucky color today is: " + aztro_data["color"])
     print("Personally, that color makes me feel like this", emoji)
+    input("press enter to start again")
+   
+
     
 
 if __name__ == "__main__":
