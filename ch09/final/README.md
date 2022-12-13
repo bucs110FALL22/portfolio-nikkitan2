@@ -3,8 +3,8 @@
 ## SHORT DESCRIPTION *(1 or 2 sentences describing your program)*
 My program starts with asking the user to indicate their zodiac sign. Upon recieving this information, the program will relay the lucky color today and the name of a cat emotion emoji for the respective zodiac sign.
 ## KNOWN BUGS AND INCOMPLETE PARTS *(list any known bugs or non-working parts)*
-None
+Nope
 ## REFERENCES *(any resources you use outside of class materials)*
-None
+Nope
 ## MISCELLANEOUS COMMENTS *(anything else you would like the grader to know)*
-None
+Nope
