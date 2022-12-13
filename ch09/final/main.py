@@ -24,7 +24,7 @@ def main():
     11: aquarius
     12: pisces
     ''')
-    sign = input("please input the number to the sign you are ")
+    sign = input("Please input the number to the sign you are: ")
     sign = sign.strip()
     try:
       sign = int(sign)
