@@ -5,26 +5,17 @@ pygame.font.Font(None, 20)
 display = pygame.display.set_mode()
 
 def seq3np1(n):
+ # Start with the given integer
   n = 101
-  
-  upper_limit = 20
-  iters = {}
-  max_so_far = max(n)
-  scale = 5
-  for i in range(2, upper_limit + 1):
-    count = 0
-  while n > 1:
-    print(n)
-    if (n % 2) == 0:
-      n = n // 2 
+
+# Keep generating new terms in the sequence until n reaches 1
+  while n != 1:
+  # If n is even, divide it by 2 to get the next term in the sequence
+    if n % 2 == 0:
+      n = n // 2
+  # If n is odd, multiply it by 3 and add 1 to get the next term in the sequence
     else:
       n = 3 * n + 1
-    count = count + 1
-    iters[n] = (count)
-      
+  
+  # Print the current term in the sequence
     print(n)
-    print(count)
-    print(iters)
-  
-  
-seq3np1(3)
