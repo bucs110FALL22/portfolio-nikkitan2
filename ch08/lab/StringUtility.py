@@ -9,51 +9,42 @@ class StringUtility:
 #part b
   def vowels(self):
     count = 0
-    for i in self.string:
+    self.low_string = self.string.lower()
+    for i in f"{self.string}":
       if(i=='a' or i=='e'or i=='i' or i=='o' or i=='u'):
         count = count + 1
     if count < 5:
       return str(count)
     else:
-      return f"many"
-  
+      count = "many"
+      return str(count)
+    
+    
   def bothEnds(self):
-    if len(self.string) >= 2:
-      my_string = self.string[0] + self.string[1] + self.string[-2] + self.string[-1]
-      return my_string
-    else:
-      return ''
+    return f"{self.string[0:2]}"+f"{self.string[-2:]}"
 
   def fixStart(self):
-    if len(self.string)>=1:
-      firstl= self.string[0]
-      for i in self.string:
-        mystring = self.string[1:].replace(firstl,"*")
-        return self.string[0]+ mystring
-    else:
-      return('')
+    self.fix_string = list(self.string)
+    c = 1
+    for l in self.fix_string[1:]:
+      if str(l) is str(self.fix_string[0]):
+        self.fix_string[c]= "*"
+        str(self.fix_string[c])
+      c+=1
+    return "".join(self.fix_string)
 
-    def asciiSum(self):
-        ans = 0
-        for i in range(len(self.s)):
-            ans = ans + ord(self.s[i])
-        return ans
+  def asciiSum(self):
+    return sum([ord(letter) for letter in self.string])
     
-    def cipher(self):
-        l = len(self.s)
-        out=''
-        for i in range(l):
-            if ord(self.s[i]) in range(65, 91):
-                if ord(self.s[i]) + l <=90:
-                    out = out + chr(ord(self.s[i]) + l)
-                else:
-                    out = out + chr(ord('A') + ord(self.s[i]) + l - 90)
-            
-            elif ord(self.s[i]) in range(97, 123):
-                if ord(self.s[i]) + l <=122:
-                    out = out + chr(ord(self.s[i]) + l)
-                else:
-                    out = out + chr(ord('A') + ord(self.s[i]) + l - 122)
-            else:
-                out = out + self.s[i]
-        return out
+  def cipher(self):
+    cipher = ""
+    for letter in range(len(self.string)):
+      if self.string[letter].isupper() == True:
+        cipher += chr((ord(self.string[letter].lower())+len(self.string)-97)%26+97).upper()
+        
+      if self.string[letter].islower()==True:
+        cipher += chr((ord(self.string[letter])+len(self.string)-97)%26+97)
+        
+      if self.string[letter] == " ":
+        cipher += " "
+    return cipher
