@@ -21,17 +21,20 @@ class StringUtility:
     
     
   def bothEnds(self):
-    return f"{self.string[0:2]}"+f"{self.string[-2:]}"
+    if len(self.string) >= 2:
+      my_string = self.string[0] + self.string[1] + self.string[-2] + self.string[-1]
+      return my_string
+    else:
+      return ''
 
   def fixStart(self):
-    self.fix_string = list(self.string)
-    c = 1
-    for l in self.fix_string[1:]:
-      if str(l) is str(self.fix_string[0]):
-        self.fix_string[c]= "*"
-        str(self.fix_string[c])
-      c+=1
-    return "".join(self.fix_string)
+    if len(self.string)>=1:
+      firstl= self.string[0]
+      for i in self.string:
+        mystring = self.string[1:].replace(firstl,"*")
+        return self.string[0]+ mystring
+    else:
+      return('')
 
   def asciiSum(self):
     return sum([ord(letter) for letter in self.string])
